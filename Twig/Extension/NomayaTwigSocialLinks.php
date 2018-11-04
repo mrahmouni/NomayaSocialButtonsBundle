@@ -45,8 +45,8 @@ class NomayaTwigSocialLinks extends \Twig_Extension{
     public function getFunctions()
     {
       return array(
-        'socialLinks'     => new \Twig_Function_Method($this, 'getSocialLinks' ,array('is_safe' => array('html'))),
-        'socialLink'     => new \Twig_Function_Method($this, 'getSocialLink' ,array('is_safe' => array('html')))
+        'socialLinks'     => new \Twig_SimpleFunction('getSocialLinks' ,array('is_safe' => array('html'))),
+        'socialLink'     => new \Twig_SimpleFunction('getSocialLink' ,array('is_safe' => array('html')))
       );
     }
 
